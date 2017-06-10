@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="shafir.irena.hw_sharedpref.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/noteImage"
+        android:layout_width="0dp"
+        android:layout_height="324dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/note" />
+
+    <EditText
+        android:id="@+id/etNoteText"
+        android:layout_width="162dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="insert text here..."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="95dp"
+        app:layout_constraintHorizontal_bias="0.45" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="58dp"
+        android:hint="1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etNoteText"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/newImage"
+        android:layout_width="108dp"
+        android:layout_height="85dp"
+        app:srcCompat="@mipmap/new_note"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:onClick="newNote"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/noteImage"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginStart="8dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/arrow_back"
+        android:backgroundTint="#e67737"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        android:onClick="back"
+        app:layout_constraintTop_toBottomOf="@+id/noteImage"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/newImage"
+        app:layout_constraintRight_toLeftOf="@+id/btnNext" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/arrow_forward"
+        android:backgroundTint="#e67737"
+        android:layout_marginTop="8dp"
+        android:onClick="nextNote"
+        app:layout_constraintTop_toBottomOf="@+id/noteImage"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/newImage"
+        app:layout_constraintVertical_bias="0.526"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnBack" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="75dp"
+        android:layout_height="80dp"
+        android:background="@drawable/save"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/newImage"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="13dp"
+        android:onClick="saveNote"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintHorizontal_bias="0.107" />
+
+
+</android.support.constraint.ConstraintLayout>
